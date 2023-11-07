@@ -2,7 +2,6 @@ import React from 'react'
 
 export const HeaderEnd = ({ elem }) => {
   const { logo, title, url, text } = elem[0];
-  // console.log(logo)
   return (
     <div className='header-footer'>
       <img src={logo} alt="какая-то лэйбл" className='img-item'/>

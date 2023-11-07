@@ -2,7 +2,7 @@ import React from 'react'
 import { HeaderUp } from './HeaderUp';
 import { HeaderNews } from './HeaderNews';
 import { HeaderEnd } from './HeaderEnd';
-import { Currency } from './Currency';
+import { TitleItem } from './TitliItem';
 
 export const Header = ({data}) => {
   const {links, news, newDate, endHeader, currency} = data;
@@ -23,7 +23,7 @@ export const Header = ({data}) => {
             </div>
             <div className='header-currency'>
               {currency.map((e) =>{
-                return <Currency currency={e} key={e.item}/>
+                return <TitleItem element={e} key={e.item}/>
               })}
               
             </div>

@@ -69,16 +69,16 @@ export const dataHeader = {
     newDate,
     currency: [
         {
-            item: 'USD',
-            curs: 91,
+            title: 'USD',
+            item: 91,
         },
         {
-            item: 'EUR',
-            curs: 101,
+            title: 'EUR',
+            item: 101,
         },
         {
-            item: 'НЕФТЬ',
-            curs: 76,
+            title: 'НЕФТЬ',
+            item: 76,
         }
     ]
 };
