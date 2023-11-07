@@ -28,7 +28,6 @@ export const dataBody = {
             title: 'Еще...',
             url: '',
         },
-        
     ],
     items: [
         {
@@ -36,5 +35,4 @@ export const dataBody = {
             item: 'фаза луны сегодня',
         },
     ],
-
-}
+};

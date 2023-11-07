@@ -1,4 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+
+// компонент отвечает за вывод курса валют, так же за статьи в формате 'Главная идея' -> название конкретной статьи
 
 export const TitleItem = ({ element }) => {
     const { title, item } = element;
@@ -6,11 +8,11 @@ export const TitleItem = ({ element }) => {
     let itemStyle;
     let titleStyle;
     if (typeof item === 'string') {
-      itemStyle = 'item-style'
-      titleStyle = ''
+        itemStyle = 'item-style';
+        titleStyle = '';
     } else {
-      itemStyle = 'currency-curs'
-      titleStyle = 'currency-title'
+        itemStyle = 'currency-curs';
+        titleStyle = 'currency-title';
     }
     return (
         <div className='currency-box'>
@@ -19,3 +21,13 @@ export const TitleItem = ({ element }) => {
         </div>
     );
 };
+
+TitleItem.propTypes = {
+    element: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        item: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+        ])
+    })
+}

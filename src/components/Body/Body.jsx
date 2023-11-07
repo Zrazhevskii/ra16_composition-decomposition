@@ -1,7 +1,8 @@
-import React from 'react';
 import { HeaderUp } from '../Header/HeaderUp';
 import { TitleItem } from '../Header/TitliItem';
+import PropTypes from 'prop-types';
 
+// компонент яв-ся сборщиком компонентов отображающих body (ссылки, поиск, рекламный банер)
 
 export const Body = ({ data }) => {
     const { links, items } = data;
@@ -13,15 +14,26 @@ export const Body = ({ data }) => {
                 })}
             </div>
             <div className='writing-field'>
-                <img className='img-find' src="https://www.pngplay.com/wp-content/uploads/13/Vertical-Keyboard-Transparent-Background.png" alt="" />
+                <img
+                    className='img-find'
+                    src='https://www.pngplay.com/wp-content/uploads/13/Vertical-Keyboard-Transparent-Background.png'
+                    alt=''
+                />
                 <button className='btn-find'>Найти</button>
             </div>
             <div className='find-item'>
                 {items.map((item) => {
-                    return <TitleItem element={item} key={item.title}/>
+                    return <TitleItem element={item} key={item.title} />;
                 })}
             </div>
             <div className='main-img'>Какая-то картинка с рекламой</div>
         </div>
     );
+};
+
+Body.propTypes = {
+    data: PropTypes.shape({
+        links: PropTypes.array.isRequired,
+        items: PropTypes.array.isRequired,
+    }),
 };

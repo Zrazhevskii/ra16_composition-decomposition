@@ -13,7 +13,9 @@ const month = [
     'ноябрь',
     'декабрь',
 ];
-const newDate = `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
+const newDate = `${date.getDate()} ${
+    month[date.getMonth()]
+} ${date.getFullYear()}`;
 
 export const dataHeader = {
     links: [
@@ -29,7 +31,6 @@ export const dataHeader = {
             title: 'Рекомендуем',
             url: '',
         },
-        
     ],
     news: [
         {
@@ -62,7 +63,7 @@ export const dataHeader = {
         {
             logo: 'https://i.pinimg.com/originals/dc/a0/81/dca081e9d499f481f1c56375a6953641.jpg',
             title: 'Работа над ошибками',
-            url: '',
+            url: '#',
             text: 'Смотрите на Яндекс и запоминайте',
         },
     ],
@@ -79,6 +80,6 @@ export const dataHeader = {
         {
             title: 'НЕФТЬ',
             item: 76,
-        }
-    ]
+        },
+    ],
 };

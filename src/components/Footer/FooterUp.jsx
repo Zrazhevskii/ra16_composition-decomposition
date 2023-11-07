@@ -1,9 +1,12 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
-export const FooterUp = (children) => {
-  return (
-    <div>
+// компонент отвечает за показ произвольных разделов/отсеков страницы (кода)
 
-    </div>
-  )
+export const FooterUp = (props) => {
+    const { children } = props;
+    return <div>{children}</div>;
+};
+
+FooterUp.propTypes ={
+    children: PropTypes.any
 }
